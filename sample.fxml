@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxWidth="1.7976931348623157E308" prefHeight="560.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="10.0" prefWidth="456.00001525878906" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.20001220703125" minWidth="0.0" prefWidth="8.999984741210938" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="259.0" minHeight="10.0" prefHeight="151.8" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="238.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="445.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="382.20001220703125" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.5999755859375" minWidth="10.0" prefWidth="140.00001525878906" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.5999755859375" minWidth="10.0" prefWidth="119.99998474121094" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="259.0" minHeight="10.0" prefHeight="44.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="140.20001220703125" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Style" textAlignment="CENTER" wrappingWidth="119.50072479248047" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Size" textAlignment="CENTER" wrappingWidth="120.500732421875" GridPane.columnIndex="1" />
+            <ComboBox id="cb_size" fx:id="cb_size" minWidth="-Infinity" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="90.0" left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="cb_style" layoutX="175.0" layoutY="112.0" minWidth="-Infinity" onAction="#on_cb_style" prefWidth="130.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="90.0" left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ImageView fx:id="pizza_image" fitHeight="117.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></ImageView>
+         </children>
+      </GridPane>
+      <HBox prefHeight="100.0" prefWidth="390.0" GridPane.rowIndex="1">
+         <children>
+            <ListView id="lv_all" fx:id="lv_all" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="90.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></ListView>
+            <VBox prefHeight="240.0" prefWidth="164.0">
+               <children>
+                  <Button id="btn_addTopping" fx:id="btn_addTopping" mnemonicParsing="false" onAction="#on_adding_topping" text="Add topping &gt;&gt;">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin></Button>
+                  <Button id="btn_removeTopping" fx:id="btn_removeTopping" mnemonicParsing="false" onAction="#on_remove_topping" text="&lt;&lt;Remove Topping">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin></Button>
+                  <Button id="btn_clear" fx:id="btn_clear" mnemonicParsing="false" onAction="#on_clear" text="Clear Section">
+                     <VBox.margin>
+                        <Insets left="20.0" top="150.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+            <ListView id="lv_selected" fx:id="lv_selected" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="90.0" />
+            <VBox prefHeight="269.0" prefWidth="103.0">
+               <children>
+                  <Button id="btn_addOrder" fx:id="btn_addOrder" mnemonicParsing="false" onAction="#on_add_to_order" prefHeight="27.0" prefWidth="88.0" text="Add Order">
+                     <VBox.margin>
+                        <Insets left="10.0" top="200.0" />
+                     </VBox.margin></Button>
+                  <Button id="btn_showOrder" fx:id="btn_showOrder" mnemonicParsing="false" onAction="#on_showOrder" text="Show Order">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextArea id="tv_area" fx:id="tv_area" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+   </children>
+</GridPane>
