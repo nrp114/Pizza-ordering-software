@@ -35,4 +35,8 @@ amount of the order shall be displayed.
 added on the order.
 
 
+<img src="https://github.com/nrp114/Pizza-ordering-software/blob/main/img1.png" align="left" height="500">
+
+<img src="https://github.com/nrp114/Pizza-ordering-software/blob/main/img2.png" align="left" height="300">
+
 
